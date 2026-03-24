@@ -4,3 +4,7 @@
 __pycache__/
 .claude/
 archive
+data/archive/
+telecoms_complaints_clean.csv
+data/telecoms_complaints_clean.csv
+model_training/model_output/

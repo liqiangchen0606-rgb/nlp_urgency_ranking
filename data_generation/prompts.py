@@ -34,31 +34,31 @@ URGENCY_DEFINITIONS = {
 # ---------------------------------------------------------------------------
 EMOTION_DEFINITIONS = {
     "Low": (
-        "Calm, measured, and factual. The customer reports the issue in a "
-        "neutral, informational tone as if describing it to a colleague. "
-        "Language is precise, unemotional, and solution-oriented. There is no "
-        "frustration, blame, or urgency in the wording. The complaint reads "
-        "like a matter-of-fact report."
+        "Calm and factual — the customer reports the issue in a composed, "
+        "matter-of-fact manner. Language is measured and solution-oriented. "
+        "There is little overt frustration or blame, though a single "
+        "understated expression of disappointment or weariness may appear. "
+        "The overall impression is of someone who is inconvenienced but "
+        "keeping their feelings largely in check."
     ),
     "Medium": (
-        "Noticeably frustrated or disappointed. The customer uses language "
-        "that signals irritation: words like 'frustrating', 'disappointed', "
-        "'unacceptable', 'fed up'. Their tone is firm and they may express "
-        "dissatisfaction with how the situation has been handled, but they "
-        "remain coherent and reasonably measured. They want resolution and "
-        "are losing patience."
+        "A frustrated tone that could be read as either controlled irritation "
+        "or mild emotional expression depending on context. The customer is "
+        "clearly not happy and may use words like 'frustrated', "
+        "'disappointed', or 'unacceptable', but they remain coherent. "
+        "Depending on their personality and history with the issue, this "
+        "could shade slightly calmer or slightly more heated — the key "
+        "quality is that their dissatisfaction is visible but not extreme."
     ),
     "High": (
-        "Highly emotional — angry, distressed, desperate, or exasperated. "
-        "The customer's language reflects intense feeling: strong adjectives "
-        "('appalling', 'disgraceful', 'absolutely livid'), expressions of "
-        "desperation or helplessness, threats to leave the provider or "
-        "escalate to a regulator, repeated emphasis on how long the problem "
-        "has persisted, and a sense that trust has been broken. The emotional "
-        "intensity should come through vocabulary and sentence structure, not "
-        "primarily through formatting. Some customers may use emphatic "
-        "capitalisation or exclamation marks, but others may express intense "
-        "anger in controlled, cutting prose."
+        "Strong dissatisfaction — the customer is clearly upset, and this "
+        "comes through in their language and the way they construct their "
+        "message. This can manifest as cold, controlled anger (clipped "
+        "sentences, pointed observations, formal ultimatums) or as more "
+        "explicit distress (expressions of desperation, repeated emphasis, "
+        "threats to escalate). The emotional state should be felt through "
+        "word choice and sentence rhythm — not primarily through exclamation "
+        "marks, capitalisation, or labels like 'livid' or 'furious'."
     ),
 }
 
@@ -92,14 +92,14 @@ SCENARIOS = [
 # Style → allowed emotion levels (Low=7, Medium=8, High=6 styles)
 # ---------------------------------------------------------------------------
 STYLE_EMOTION: dict[str, list[str]] = {
-    "Formal professional":            ["Low", "Medium"],
+    "Formal professional":            ["Low", "Medium", "High"],
     "Casual conversational":          ["Low", "Medium", "High"],
-    "Passive-aggressive / sarcastic": ["Medium", "High"],
+    "Passive-aggressive / sarcastic": ["Low", "Medium", "High"],
     "Verbose and detailed":           ["Low", "Medium", "High"],
     "Terse and minimal":              ["Low", "Medium", "High"],
     "Narrative / storytelling":       ["Low", "Medium", "High"],
     "Legalistic / rights-aware":      ["Low", "Medium", "High"],
-    "Polite but firm":                ["Low", "Medium"],
+    "Polite but firm":                ["Low", "Medium", "High"],
 }
 
 # ---------------------------------------------------------------------------

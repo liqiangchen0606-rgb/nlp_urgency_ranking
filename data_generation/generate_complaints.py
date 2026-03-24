@@ -25,28 +25,32 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 EMOTION_INSTRUCTIONS = {
     "Low": (
-        "\nCRITICAL TONE INSTRUCTION: The writing MUST be completely calm, "
-        "neutral, and factual — no frustration, no blame, no emotional "
-        "language whatsoever. The complaint should read like a dry incident "
-        "report or a matter-of-fact note to a colleague. Avoid words like "
-        "'frustrated', 'disappointed', 'unacceptable', or any emotional "
-        "adjectives.\n"
+        "\nCRITICAL TONE INSTRUCTION: This is a LOW emotion complaint. "
+        "Express this through word choice and sentence structure — the "
+        "writing should feel composed and matter-of-fact. Do NOT use "
+        "exclamation marks, capitalisation for emphasis, or words that "
+        "announce emotion (e.g. 'frustrated', 'appalled', 'furious'). "
+        "A single understated note of disappointment is acceptable, but "
+        "the overall tone must read as measured and controlled.\n"
     ),
     "Medium": (
-        "\nCRITICAL TONE INSTRUCTION: The customer is clearly frustrated "
-        "and losing patience. Use language that signals irritation: words "
-        "like 'frustrated', 'disappointed', 'unacceptable', 'fed up'. "
-        "The tone should be firm and dissatisfied but still coherent — "
-        "not furious, not calm.\n"
+        "\nCRITICAL TONE INSTRUCTION: This is a MEDIUM emotion complaint. "
+        "Express dissatisfaction through tone and word choice — the reader "
+        "should sense frustration, but it need not be announced explicitly. "
+        "Avoid over-relying on exclamation marks or capitalisation. "
+        "The emotional register should feel genuine: some medium-emotion "
+        "customers are quietly firm, others are more openly irritated. "
+        "Capture this ambiguity rather than landing squarely in the middle.\n"
     ),
     "High": (
-        "\nCRITICAL TONE INSTRUCTION: The customer MUST sound genuinely "
-        "angry, distressed, or desperate. Use strong emotional language — "
-        "'appalling', 'disgusted', 'livid', 'disgraceful', 'absolutely "
-        "furious'. Include threats to leave the provider, escalate to "
-        "Ofcom, or seek legal advice. The emotional intensity should be "
-        "immediately obvious from the very first sentence. Do NOT write "
-        "in a measured or calm tone — the reader should feel the anger.\n"
+        "\nCRITICAL TONE INSTRUCTION: This is a HIGH emotion complaint. "
+        "Express this through word choice and sentence structure — do NOT "
+        "rely on exclamation marks, capitalisation, or words that label "
+        "the emotion ('livid', 'furious', 'appalling'). The intensity "
+        "should be felt, not announced. High emotion can manifest as cold "
+        "controlled anger (short, clipped sentences, cutting observations, "
+        "formal ultimatums) or as explicit distress — choose whichever "
+        "fits the customer profile and writing style.\n"
     ),
 }
 
@@ -251,7 +255,7 @@ def main() -> None:
 
     df = asyncio.run(generate_all(total=args.total, seed=args.seed))
 
-    output_path = os.path.join(os.path.dirname(__file__), "telecoms_complaints.csv")
+    output_path = os.path.join(os.path.dirname(__file__), "..", "data", "telecoms_complaints.csv")
     df.to_csv(output_path, index=False, encoding="utf-8-sig")
     print(f"\nSaved {len(df)} complaints to {output_path}")
 

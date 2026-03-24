@@ -1,0 +1,4 @@
+timestamp,run_id,notes,model,max_length,batch_size,lr,best_epoch,best_val_loss,best_val_urgency_f1,best_val_emotion_f1,test_urgency_macro_f1,test_urgency_f1_low,test_urgency_f1_medium,test_urgency_f1_high,test_emotion_macro_f1,test_emotion_f1_low,test_emotion_f1_medium,test_emotion_f1_high
+2026-03-24 00:00:00,20260324_baseline,Baseline run. max_length=128 mixed precision fp16. No class weights no LR scheduler. Early stopping on val loss (patience=2). Best epoch was 3.,microsoft/deberta-v3-base,128,16,2e-05,3,0.8946,0.5365,0.996,0.5776,0.716,0.3502,0.6667,0.9907,0.996,0.9861,0.9899
+2026-03-24 17:34:46,20260324_173446,,microsoft/deberta-v3-base,128,16,2e-05,5,0.8867,0.625,0.9973,0.6491,0.7311,0.5114,0.7047,0.9893,0.994,0.9841,0.9899
+2026-03-24 18:24:48,20260324_182448,,microsoft/deberta-v3-base,128,16,2e-05,5,1.2856,0.6432,0.8425,0.6224,0.6962,0.4802,0.6909,0.8348,0.9459,0.7917,0.7667
