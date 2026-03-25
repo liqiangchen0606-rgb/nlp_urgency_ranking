@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-03-24 17:34:46",
+  "run_id": "20260324_173446",
+  "notes": "",
+  "model": "microsoft/deberta-v3-base",
+  "max_length": 128,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "best_epoch": 5,
+  "epochs_max": 5,
+  "early_stopping_patience": 2,
+  "optimizer": "AdamW",
+  "best_val_loss": 0.8867,
+  "best_val_urgency_f1": 0.625,
+  "best_val_emotion_f1": 0.9973,
+  "test_urgency_macro_f1": 0.6491,
+  "test_urgency_f1_low": 0.7311,
+  "test_urgency_f1_medium": 0.5114,
+  "test_urgency_f1_high": 0.7047,
+  "test_emotion_macro_f1": 0.9893,
+  "test_emotion_f1_low": 0.994,
+  "test_emotion_f1_medium": 0.9841,
+  "test_emotion_f1_high": 0.9899,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.5583,
+      "val_loss": 1.0941,
+      "val_urgency_f1": 0.3802,
+      "val_emotion_f1": 0.9907
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9492,
+      "val_loss": 0.8982,
+      "val_urgency_f1": 0.5432,
+      "val_emotion_f1": 0.992
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7252,
+      "val_loss": 0.802,
+      "val_urgency_f1": 0.5961,
+      "val_emotion_f1": 0.9933
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.6129,
+      "val_loss": 0.8375,
+      "val_urgency_f1": 0.5997,
+      "val_emotion_f1": 0.996
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5045,
+      "val_loss": 0.8867,
+      "val_urgency_f1": 0.625,
+      "val_emotion_f1": 0.9973
+    }
+  ]
+}

@@ -122,12 +122,12 @@ def _build_user_prompt(cell_assignments: list[dict]) -> str:
     return header + "\n".join(items) + footer
 
 
-BATCH_SIZE = 15
+BATCH_SIZE = 5
 MAX_RETRIES = 2
 MAX_CONCURRENT = 10
 
-# MODEL = "gpt-5-mini"
-MODEL = "gpt-4o-mini"
+# MODEL = "gpt-4o-mini"
+MODEL = "gpt-5-mini"
 
 
 async def _generate_batch(

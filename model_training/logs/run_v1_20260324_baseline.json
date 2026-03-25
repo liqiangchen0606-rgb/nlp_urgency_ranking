@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-03-24 00:00:00",
+  "run_id": "20260324_baseline",
+  "notes": "Baseline run. max_length=128, mixed precision fp16. No class weights, no LR scheduler. Early stopping on val loss (patience=2). Best epoch was 3.",
+  "model": "microsoft/deberta-v3-base",
+  "max_length": 128,
+  "batch_size": 16,
+  "lr": 2e-05,
+  "best_epoch": 3,
+  "epochs_max": 5,
+  "early_stopping_patience": 2,
+  "optimizer": "AdamW",
+  "best_val_loss": 0.8946,
+  "best_val_urgency_f1": 0.5365,
+  "best_val_emotion_f1": 0.996,
+  "test_urgency_macro_f1": 0.5776,
+  "test_urgency_f1_low": 0.716,
+  "test_urgency_f1_medium": 0.3502,
+  "test_urgency_f1_high": 0.6667,
+  "test_emotion_macro_f1": 0.9907,
+  "test_emotion_f1_low": 0.996,
+  "test_emotion_f1_medium": 0.9861,
+  "test_emotion_f1_high": 0.9899,
+  "epoch_history": [
+    {"epoch": 1, "train_loss": 1.2978, "val_loss": 0.9818, "val_urgency_f1": 0.5099, "val_emotion_f1": 0.9827},
+    {"epoch": 2, "train_loss": 0.9075, "val_loss": 0.9085, "val_urgency_f1": 0.5464, "val_emotion_f1": 0.9827},
+    {"epoch": 3, "train_loss": 0.7371, "val_loss": 0.8946, "val_urgency_f1": 0.5365, "val_emotion_f1": 0.996},
+    {"epoch": 4, "train_loss": 0.596,  "val_loss": 0.9141, "val_urgency_f1": 0.5985, "val_emotion_f1": 0.9947},
+    {"epoch": 5, "train_loss": 0.4515, "val_loss": 1.0882, "val_urgency_f1": 0.5708, "val_emotion_f1": 0.9907}
+  ]
+}

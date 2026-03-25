@@ -27,7 +27,7 @@ from tqdm import tqdm
 # ── Config ──────────────────────────────────────────────────────────────────
 CSV_PATH      = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "telecoms_complaints.csv")
 MODEL_NAME    = "microsoft/deberta-v3-base"
-OUTPUT_DIR    = "model_output"
+OUTPUT_DIR    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "model_output")
 MAX_LENGTH    = 192
 BATCH_SIZE    = 16
 LR            = 2e-5
